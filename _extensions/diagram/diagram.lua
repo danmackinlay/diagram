@@ -199,14 +199,9 @@ local tikz = {
         )
         pdf_content = read_file(pdf_file)
         if status ~= 0 or signal ~= 0 or pdf_content == nil then
-          print(output)
-          print(pdf_content)
-          print(status)
-          print(signal)
-
           warn(string.format(
-          "pdflatex failed with status %d and signal %d. Output:\n%s", status,
-            signal, output))
+          "pdflatex failed with status %s and signal %s. Output:\n%s",
+            tostring(status), tostring(signal), tostring(output)))
         end
 
         return pdf_content, 'application/pdf'
