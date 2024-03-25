@@ -2,3 +2,4 @@ sample.html
 tmp-latex
 
 /.luarc.json
+.DS_Store
